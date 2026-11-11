@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T23:10:00Z",
+  "title": "Design System: VR AQUA — Graphite Still Life",
+  "extensions": {
+    "colorMeta": {
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#0C0E11",
+        "purpose": "Page ground, hero, collection, categories, footer.",
+        "tonalRamp": [
+          "#191E24",
+          "#333B48",
+          "#4C596C",
+          "#657690",
+          "#8795AB",
+          "#ABB5C4",
+          "#D1D5DB",
+          "#F1F2F4"
+        ]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#12161B",
+        "purpose": "Introduction, process, and contact bands.",
+        "tonalRamp": [
+          "#181E25",
+          "#313C49",
+          "#495A6E",
+          "#627893",
+          "#8597AD",
+          "#A9B6C6",
+          "#D0D6DC",
+          "#F0F2F4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#E9E9E7",
+        "purpose": "Display headings, product names, primary button ground.",
+        "tonalRamp": [
+          "#20201D",
+          "#40403B",
+          "#606058",
+          "#808075",
+          "#9D9D95",
+          "#BBBBB4",
+          "#D7D7D5",
+          "#F3F3F2"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Steel",
+        "canonical": "#9299A1",
+        "purpose": "Body copy, navigation at rest, secondary labels.",
+        "tonalRamp": [
+          "#1C1E21",
+          "#393D42",
+          "#555B63",
+          "#717A83",
+          "#9198A1",
+          "#B2B7BD",
+          "#D4D6D8",
+          "#F2F2F3"
+        ]
+      },
+      "steel-deep": {
+        "role": "neutral",
+        "displayName": "Steel Deep",
+        "canonical": "#7E8994",
+        "purpose": "Optional hints, placeholders, footer copyright.",
+        "tonalRamp": [
+          "#1C1F21",
+          "#373D43",
+          "#535C64",
+          "#6F7A86",
+          "#8F99A3",
+          "#B1B8BE",
+          "#D4D6D9",
+          "#F1F2F3"
+        ]
+      },
+      "highlight": {
+        "role": "neutral",
+        "displayName": "Highlight",
+        "canonical": "#FFFFFF",
+        "purpose": "Hover text and the primary button hover ground.",
+        "tonalRamp": [
+          "#1F1F1F",
+          "#3D3D3D",
+          "#5C5C5C",
+          "#7A7A7A",
+          "#999999",
+          "#B8B8B8",
+          "#D6D6D6",
+          "#F2F2F2"
+        ]
+      },
+      "water": {
+        "role": "primary",
+        "displayName": "Water",
+        "canonical": "#258FC1",
+        "purpose": "Focus, active size underlines, process numbers, hero light.",
+        "tonalRamp": [
+          "#0A2633",
+          "#144C67",
+          "#1E729A",
+          "#2798CD",
+          "#54B2DE",
+          "#87C9E8",
+          "#C3DDEA",
+          "#ECF4F8"
+        ]
+      },
+      "water-soft": {
+        "role": "primary",
+        "displayName": "Water Soft",
+        "canonical": "rgba(37, 143, 193, 0.13)",
+        "purpose": "Selected radio chip ground.",
+        "tonalRamp": [
+          "#0A2633",
+          "#144C67",
+          "#1E729A",
+          "#2798CD",
+          "#54B2DE",
+          "#87C9E8",
+          "#C3DDEA",
+          "#ECF4F8"
+        ]
+      },
+      "water-wash": {
+        "role": "primary",
+        "displayName": "Water Wash",
+        "canonical": "rgba(37, 143, 193, 0.1)",
+        "purpose": "Documented hero refraction wash.",
+        "tonalRamp": [
+          "#0A2633",
+          "#144C67",
+          "#1E729A",
+          "#2798CD",
+          "#54B2DE",
+          "#87C9E8",
+          "#C3DDEA",
+          "#ECF4F8"
+        ]
+      },
+      "water-wash-soft": {
+        "role": "primary",
+        "displayName": "Water Wash Soft",
+        "canonical": "rgba(37, 143, 193, 0.055)",
+        "purpose": "Secondary hero refraction wash.",
+        "tonalRamp": [
+          "#0A2633",
+          "#144C67",
+          "#1E729A",
+          "#2798CD",
+          "#54B2DE",
+          "#87C9E8",
+          "#C3DDEA",
+          "#ECF4F8"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#30363D",
+        "purpose": "Rules, field underlines, stage boundaries.",
+        "tonalRamp": [
+          "#1B1E22",
+          "#363D44",
+          "#515B67",
+          "#6C7989",
+          "#8D98A5",
+          "#AFB7C0",
+          "#D3D6DA",
+          "#F1F2F3"
+        ]
+      },
+      "hairline-soft": {
+        "role": "neutral",
+        "displayName": "Hairline Soft",
+        "canonical": "rgba(48, 54, 61, 0.62)",
+        "purpose": "Low-contrast footer and mobile-menu dividers.",
+        "tonalRamp": [
+          "#1B1E22",
+          "#363D44",
+          "#515B67",
+          "#6C7989",
+          "#8D98A5",
+          "#AFB7C0",
+          "#D3D6DA",
+          "#F1F2F3"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Danger",
+        "canonical": "#FFADAD",
+        "purpose": "Invalid field rules and validation messages.",
+        "tonalRamp": [
+          "#390505",
+          "#710909",
+          "#AA0E0E",
+          "#E21212",
+          "#F04242",
+          "#F47B7B",
+          "#EEBEBE",
+          "#FAEBEB"
+        ]
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Scrim",
+        "canonical": "rgba(6, 8, 11, 0.74)",
+        "purpose": "Backdrop behind the mobile menu dialog.",
+        "tonalRamp": [
+          "#161D28",
+          "#2B3A4F",
+          "#415677",
+          "#56739E",
+          "#7B93B7",
+          "#A3B3CD",
+          "#CED5DF",
+          "#F0F2F5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Every section heading."
+      },
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "The two-line hero statement on desktop."
+      },
+      "hero-stacked": {
+        "displayName": "Hero Stacked",
+        "purpose": "The hero statement below 1024px."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product names and process step titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs and ledes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, buttons, form labels, metadata."
+      },
+      "input": {
+        "displayName": "Input",
+        "purpose": "Typed form values."
+      },
+      "logo": {
+        "displayName": "Logo",
+        "purpose": "The two-word header wordmark."
+      },
+      "menu-link": {
+        "displayName": "Menu Link",
+        "purpose": "Full-screen mobile navigation."
+      },
+      "industry": {
+        "displayName": "Industry",
+        "purpose": "The categories list."
+      },
+      "industry-mobile": {
+        "displayName": "Industry Mobile",
+        "purpose": "The categories list below 600px."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Status and validation text floor."
+      }
+    },
+    "shadows": [
+      {
+        "name": "bottle-footprint",
+        "value": "drop-shadow(0 2.5rem 2rem rgba(0, 0, 0, 0.42))",
+        "purpose": "Seats the bottle artwork on the hero and product stages."
+      }
+    ],
+    "motion": [
+      {
+        "name": "dur-fast",
+        "value": "140ms",
+        "purpose": "Hover, border and color state changes."
+      },
+      {
+        "name": "dur",
+        "value": "240ms",
+        "purpose": "Navigation underlines and dialog bookkeeping."
+      },
+      {
+        "name": "dur-slow",
+        "value": "520ms",
+        "purpose": "Larger state transitions."
+      },
+      {
+        "name": "dur-reveal",
+        "value": "700ms",
+        "purpose": "Scroll reveals."
+      },
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "General ease for small state changes."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entrances, reveals, image switching."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "hero-stack",
+        "value": "1024px"
+      },
+      {
+        "name": "layout-stack",
+        "value": "900px"
+      },
+      {
+        "name": "nav-menu",
+        "value": "860px"
+      },
+      {
+        "name": "form-single",
+        "value": "600px"
+      },
+      {
+        "name": "logo-compact",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Paper-filled action for the main conversion path.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">REQUEST A QUOTE</button>",
+      "css": ".ds-btn-primary{display:inline-flex;min-height:52px;align-items:center;justify-content:center;border:1px solid #E9E9E7;background:#E9E9E7;color:#0C0E11;padding:14.4px 25.6px;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:.055em;line-height:1;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),border-color 140ms cubic-bezier(.16,1,.3,1),transform 140ms cubic-bezier(.16,1,.3,1)}.ds-btn-primary:hover{background:#FFFFFF;border-color:#FFFFFF}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on graphite.",
+      "html": "<button class=\"ds-btn-outline\" type=\"button\">VIEW BOTTLE DESIGNS</button>",
+      "css": ".ds-btn-outline{display:inline-flex;min-height:52px;align-items:center;justify-content:center;border:1px solid #30363D;background:transparent;color:#E9E9E7;padding:14.4px 25.6px;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:.055em;line-height:1;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),border-color 140ms cubic-bezier(.16,1,.3,1),transform 140ms cubic-bezier(.16,1,.3,1)}.ds-btn-outline:hover{border-color:#7E8994;background:rgba(255,255,255,.03)}.ds-btn-outline:active{transform:translateY(1px)}.ds-btn-outline:focus-visible{outline:2px solid #258FC1;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Quiet header link with a water underline for the active section.",
+      "html": "<a class=\"ds-nav-link is-active\" href=\"#\">Bottle designs</a>",
+      "css": ".ds-nav-link{position:relative;display:inline-flex;align-items:center;padding:16px 0;color:#9299A1;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1;text-decoration:none;transition:color 140ms cubic-bezier(.16,1,.3,1)}.ds-nav-link::after{position:absolute;right:0;bottom:8.8px;left:0;height:1px;background:#258FC1;content:'';transform:scaleX(0);transform-origin:right;transition:transform 240ms cubic-bezier(.16,1,.3,1)}.ds-nav-link:hover,.ds-nav-link.is-active{color:#E9E9E7}.ds-nav-link:hover::after,.ds-nav-link.is-active::after{transform:scaleX(1);transform-origin:left}.ds-nav-link:focus-visible{outline:2px solid #258FC1;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "Bottom-rule field used throughout the inquiry form.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-business\">Business name <span aria-hidden=\"true\">*</span></label><input id=\"ds-business\" type=\"text\" autocomplete=\"organization\" required /></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6.4px;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif}.ds-field label{color:#9299A1;font-size:14px;line-height:1.4}.ds-field label span{color:#258FC1}.ds-field input{width:100%;min-height:44px;border:0;border-bottom:1px solid #30363D;border-radius:0;padding:8.8px 0;background:transparent;color:#E9E9E7;font:400 16px 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;transition:border-color 140ms cubic-bezier(.16,1,.3,1)}.ds-field input:focus{outline:none;border-color:#258FC1}.ds-field input[aria-invalid='true']{border-color:#FFADAD}"
+    },
+    {
+      "name": "Radio Chip",
+      "kind": "chip",
+      "refersTo": "radio-chip",
+      "description": "Square size selector chip in the inquiry form.",
+      "html": "<label class=\"ds-chip is-active\"><input type=\"radio\" name=\"ds-size\" checked /><span>500 ML</span></label>",
+      "css": ".ds-chip{position:relative;display:inline-flex;min-height:44px;align-items:center;justify-content:center;border:1px solid #30363D;border-radius:0;padding:8px 16px;color:#9299A1;cursor:pointer;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1;transition:color 140ms cubic-bezier(.16,1,.3,1),border-color 140ms cubic-bezier(.16,1,.3,1),background-color 140ms cubic-bezier(.16,1,.3,1)}.ds-chip:hover{border-color:#7E8994;color:#E9E9E7}.ds-chip.is-active{border-color:#258FC1;background:rgba(37,143,193,.13);color:#E9E9E7}.ds-chip input{position:absolute;width:1px;height:1px;opacity:0}.ds-chip:focus-within{outline:2px solid #258FC1;outline-offset:3px}"
+    },
+    {
+      "name": "Bottle Carousel",
+      "kind": "card",
+      "refersTo": null,
+      "description": "The signature block: every supplied bottle on one semi-circular track, the centre bottle featured, advancing every 1.8s with no visible controls, and the active business named below.",
+      "html": "<section class=\"ds-carousel\" aria-label=\"Customized bottle collection\">\n  <div class=\"ds-carousel__stage\">\n    <span class=\"ds-carousel__item\" style=\"--x:-196px;--y:-20px;--o:.68;--z:96;--bottle-h:168px\"><img src=\"/assets/optimized/Shiv%20Shakti-500ml.webp\" alt=\"\" /></span>\n    <span class=\"ds-carousel__item\" style=\"--x:0;--y:0;--o:1;--z:120;--bottle-h:280px\"><img src=\"/assets/optimized/Golden%20Grill-500ml.webp\" alt=\"Golden Grill 500 ML bottle\" /></span>\n    <span class=\"ds-carousel__item\" style=\"--x:196px;--y:-20px;--o:.68;--z:96;--bottle-h:168px\"><img src=\"/assets/optimized/La%20Pino%E2%80%99z-500ml.webp\" alt=\"\" /></span>\n  </div>\n  <p class=\"ds-carousel__info\">Golden Grill <span>500 ML / 1 Litre</span></p>\n</section>",
+      "css": ".ds-carousel{font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif}.ds-carousel__stage{position:relative;height:392px;isolation:isolate;overflow-x:clip;touch-action:pan-y}.ds-carousel__item{position:absolute;bottom:44px;left:50%;display:block;opacity:var(--o);transform:translate3d(calc(-50% + var(--x)),var(--y),0);transition:transform 700ms cubic-bezier(.16,1,.3,1),opacity 700ms cubic-bezier(.16,1,.3,1)}.ds-carousel__item img{display:block;width:auto;height:var(--bottle-h);max-width:none;object-fit:contain;object-position:center bottom}.ds-carousel__info{display:grid;justify-items:center;gap:3.2px;margin:clamp(1.6rem,2.6vw,2.1rem) 0 0;color:#E9E9E7;font-family:'Archivo','Helvetica Neue',Arial,sans-serif;font-size:clamp(1rem,1.21rem,1.75rem);font-weight:500;letter-spacing:.045em;text-align:center;text-transform:uppercase}.ds-carousel__info span{display:block;margin-top:3.2px;color:#7E8994;font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Graphite Still Life",
+    "overview": "A darkroom catalogue plate for real packaging: a matte graphite field, one bottle at a time, and type that behaves like a caption rather than a campaign. There are no lifestyle photographs, no slogans, and no decorative apparatus. The bottle is the subject; the page is the room around it.\n\nThe world is built from two close graphite tones, a single water blue, and two typefaces. Archivo gives the headings geometric authority; IBM Plex Sans keeps every paragraph, label and form control plain and legible. Surfaces stay flat, corners stay square, and rules are hairlines. The only atmospheric moment is the hero, where a soft water-refraction wash sits behind the bottle and then disappears for the rest of the page.",
+    "keyCharacteristics": [
+      "Tonal graphite bands instead of cards; no two consecutive sections share a background.",
+      "Real bottle artwork at full scale, transparent and uncropped, arranged along a shallow arc and rotated through one exhibition track.",
+      "Archivo display against IBM Plex Sans body, with one fluid scale and no micro-captions.",
+      "One water blue used for state and light, never as a decorative theme.",
+      "Square corners, hairline rules, and motion limited to entrances, reveals, and the carousel's steady rotation."
+    ],
+    "rules": [
+      {
+        "name": "The One Water Note Rule",
+        "body": "Blue never fills a section, a card, or a heading. It appears as light, focus, or a 1px state marker, and occupies less than 5% of any viewport.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Second Accent Rule",
+        "body": "There is no secondary brand hue. Warm colors exist only as the danger state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Family Rule",
+        "body": "Archivo and IBM Plex Sans are the only typefaces. If a piece of text cannot be set in one of them, it does not belong on the page.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Micro-Caption Rule",
+        "body": "No 10px uppercase captions, section indices, vertical labels, or decorative metadata. Small text starts at 0.875rem and must carry real information.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Sentence Case Rule",
+        "body": "Copy is written in sentence case unless it is a supplied headline or an action label. Small caps, spaced capitals, and mixed tracking are not used to manufacture hierarchy.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Repeated Layout Rule",
+        "body": "No two consecutive sections share the same split or the same background tone. The carousel is the only repeated module, and its arc is one continuous composition rather than a grid.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat At Rest Rule",
+        "body": "If an element needs separation, add a tonal field or a 1px rule. Do not add a panel shadow, glass blur, or glow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Structure is drawn with a 1px rule, never with a container outline or a 2px divider. The carousel has no frame at all: its bottles sit directly on the graphite ground, separated by space and scale alone.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do alternate #0C0E11 and #12161B between sections, keeping collection bottles straight on the graphite ground with no plate behind them.",
+      "Do keep the hero to one bottle, one water wash, and the two supplied headline lines.",
+      "Do let real product files determine scale: object-fit contain, natural proportions, no crop or recolor.",
+      "Do set every small label at 0.875rem or larger in IBM Plex Sans.",
+      "Do use a 1px #30363D rule for structure and 0 radius for every control.",
+      "Do pause the carousel for hover, focus, drag, off-screen, and hidden-tab states, and disable autoplay under prefers-reduced-motion.",
+      "Do respect prefers-reduced-motion by removing entrances, reveals, and image transitions."
+    ],
+    "donts": [
+      "Don't add slogans, testimonials, statistics, certifications, prices, or invented contact details.",
+      "Don't add section indices, ghost numerals, vertical labels, micro-captions, or outlined footer wordmarks.",
+      "Don't wrap bottles in tiles or panels, add category filters, or show more than the business name and available sizes.",
+      "Don't rotate, tilt, crop, recolor, or shadow the collection artwork, or repeat collection images elsewhere on the page.",
+      "Don't use stock water photography, large background images, glassmorphism, gradients beyond the hero wash, or a second accent color.",
+      "Don't use a third typeface, italic editorial serif, spaced uppercase captions, or more than one weight per heading block."
+    ]
+  }
+}

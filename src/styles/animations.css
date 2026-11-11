@@ -1,0 +1,59 @@
+/* Motion: hero entrance, scroll reveals, menu transition, image switching. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 1.1rem, 0);
+  transition:
+    opacity var(--dur-reveal) var(--ease-out) var(--reveal-delay, 0ms),
+    transform var(--dur-reveal) var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-enter {
+  animation: hero-enter 820ms var(--ease-out) both;
+}
+
+.hero-enter--visual {
+  animation-delay: 140ms;
+  animation-duration: 1050ms;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.1rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -0.6rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-enter {
+    animation: none;
+    opacity: 1;
+  }
+
+}
