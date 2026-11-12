@@ -31,7 +31,7 @@ export default function ContactSection() {
     const next = {}
     if (!form.businessName.trim()) next.businessName = 'Enter your business name.'
     if (!form.contactPerson.trim()) next.contactPerson = 'Enter a contact person.'
-    if (!/^[+()\d\s-]{7,}$/.test(form.phone.trim())) {
+    if (!/^[+()\\d\\s-]{7,}$/.test(form.phone.trim())) {
       next.phone = 'Enter a phone number with at least 7 digits.'
     }
     if (!form.businessType) next.businessType = 'Choose a business type.'
@@ -88,180 +88,174 @@ export default function ContactSection() {
 
           <Reveal delay={80}>
             <p className="contact__lede">
-              Share your requirements and tell us about your business.
+              Tell us about your business and bottle requirements. We'll take it from there.
             </p>
           </Reveal>
 
           {hasContact && (
-            <Reveal className="contact__details" delay={140}>
-              {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
-              {site.phone && <a href={`tel:${site.phone}`}>{site.phone}</a>}
-              {site.whatsapp && (
-                <a
-                  href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WhatsApp
-                </a>
-              )}
-            </Reveal>
+            <div className="contact__availability" aria-label="Contact information">
+              <span className="contact__availability-text">
+                {site.email && (
+                  <a href={`mailto:${site.email}`}>
+                    {site.email}
+                  </a>
+                )}
+                {site.phone && site.email && <span className="contact__separator">|</span>}
+                {site.phone && (
+                  <a href={`tel:${site.phone}`}>
+                    {site.phone}
+                  </a>
+                )}
+                {site.whatsapp && (
+                  <a
+                    href={`https://wa.me/${site.whatsapp.replace(/\\D/g, '')}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WhatsApp
+                  </a>
+                )}
+              </span>
+            </div>
           )}
-        </div>
 
-        <Reveal className="contact__form-wrap" delay={100}>
-          <form ref={formRef} id="inquiry-form" className="inquiry-form" onSubmit={handleSubmit} noValidate>
-            <div className="form-row form-row--two">
-              <div className="field">
-                <label htmlFor="contact-businessName">
-                  Business name <span aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="contact-businessName"
-                  name="businessName"
-                  type="text"
-                  autoComplete="organization"
-                  value={form.businessName}
-                  onChange={(event) => updateField('businessName', event.target.value)}
-                  aria-invalid={Boolean(errors.businessName)}
-                  aria-describedby={describedBy('businessName')}
-                  required
-                />
-                {errors.businessName && (
-                  <p className="field__error" id="contact-businessName-error">
-                    {errors.businessName}
-                  </p>
-                )}
-              </div>
-
-              <div className="field">
-                <label htmlFor="contact-contactPerson">
-                  Contact person <span aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="contact-contactPerson"
-                  name="contactPerson"
-                  type="text"
-                  autoComplete="name"
-                  value={form.contactPerson}
-                  onChange={(event) => updateField('contactPerson', event.target.value)}
-                  aria-invalid={Boolean(errors.contactPerson)}
-                  aria-describedby={describedBy('contactPerson')}
-                  required
-                />
-                {errors.contactPerson && (
-                  <p className="field__error" id="contact-contactPerson-error">
-                    {errors.contactPerson}
-                  </p>
-                )}
-              </div>
-            </div>
-
-            <div className="form-row form-row--two">
-              <div className="field">
-                <label htmlFor="contact-phone">
-                  Phone number <span aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="contact-phone"
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  autoComplete="tel"
-                  placeholder="+91"
-                  value={form.phone}
-                  onChange={(event) => updateField('phone', event.target.value)}
-                  aria-invalid={Boolean(errors.phone)}
-                  aria-describedby={describedBy('phone')}
-                  required
-                />
-                {errors.phone && (
-                  <p className="field__error" id="contact-phone-error">
-                    {errors.phone}
-                  </p>
-                )}
-              </div>
-
-              <div className="field">
-                <label htmlFor="contact-businessType">
-                  Business type <span aria-hidden="true">*</span>
-                </label>
-                <select
-                  id="contact-businessType"
-                  name="businessType"
-                  value={form.businessType}
-                  onChange={(event) => updateField('businessType', event.target.value)}
-                  aria-invalid={Boolean(errors.businessType)}
-                  aria-describedby={describedBy('businessType')}
-                  required
-                >
-                  <option value="">Select a type</option>
-                  {businessTypes.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-                {errors.businessType && (
-                  <p className="field__error" id="contact-businessType-error">
-                    {errors.businessType}
-                  </p>
-                )}
-              </div>
-            </div>
-
-            <fieldset className="field field--fieldset">
-              <legend>
-                Bottle size preference <span aria-hidden="true">*</span>
-              </legend>
-              <div className="radio-group">
-                {bottleSizes.map((size) => (
-                  <label key={size} className={`radio-chip ${form.bottleSize === size ? 'is-active' : ''}`}>
-                    <input
-                      type="radio"
-                      name="bottleSize"
-                      value={size}
-                      checked={form.bottleSize === size}
-                      onChange={(event) => updateField('bottleSize', event.target.value)}
-                      aria-invalid={Boolean(errors.bottleSize)}
-                      aria-describedby={describedBy('bottleSize')}
-                    />
-                    <span>{size}</span>
+          <Reveal className="contact__form-wrap" delay={100}>
+            <form ref={formRef} id="inquiry-form" className="inquiry-form" onSubmit={handleSubmit} noValidate>
+              <fieldset className="contact__group contact__group--details">
+                <legend className="contact__group-label">YOUR DETAILS</legend>
+                <div className="field">
+                  <label htmlFor="contact-businessName">
+                    Business name <span aria-hidden="true">*</span>
                   </label>
-                ))}
+                  <input
+                    id="contact-businessName"
+                    name="businessName"
+                    type="text"
+                    autoComplete="organization"
+                    value={form.businessName}
+                    onChange={(event) => updateField('businessName', event.target.value)}
+                    aria-invalid={Boolean(errors.businessName)}
+                    aria-describedby={describedBy('businessName')}
+                    required
+                  />
+                  {errors.businessName && (
+                    <p className="field__error" id="contact-businessName-error">
+                      {errors.businessName}
+                    </p>
+                  )}
+                </div>
+
+                <div className="field">
+                  <label htmlFor="contact-contactPerson">
+                    Contact person <span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="contact-contactPerson"
+                    name="contactPerson"
+                    type="text"
+                    autoComplete="name"
+                    value={form.contactPerson}
+                    onChange={(event) => updateField('contactPerson', event.target.value)}
+                    aria-invalid={Boolean(errors.contactPerson)}
+                    aria-describedby={describedBy('contactPerson')}
+                    required
+                  />
+                  {errors.contactPerson && (
+                    <p className="field__error" id="contact-contactPerson-error">
+                      {errors.contactPerson}
+                    </p>
+                  )}
+                </div>
+              </fieldset>
+
+              <fieldset className="contact__group contact__group--requirements">
+                <legend className="contact__group-label">YOUR REQUIREMENTS</legend>
+                <div className="form-row form-row--two">
+                  <div className="field">
+                    <label htmlFor="contact-businessType">
+                      Business type <span aria-hidden="true">*</span>
+                    </label>
+                    <select
+                      id="contact-businessType"
+                      name="businessType"
+                      value={form.businessType}
+                      onChange={(event) => updateField('businessType', event.target.value)}
+                      aria-invalid={Boolean(errors.businessType)}
+                      aria-describedby={describedBy('businessType')}
+                      required
+                    >
+                      <option value="">Select a type</option>
+                      {businessTypes.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.businessType && (
+                      <p className="field__error" id="contact-businessType-error">
+                        {errors.businessType}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="field">
+                    <label htmlFor="contact-bottleSize">
+                      Bottle size preference <span aria-hidden="true">*</span>
+                    </label>
+                    <div className="radio-group">
+                      {bottleSizes.map((size) => (
+                        <label key={size} className={`radio-chip ${form.bottleSize === size ? 'is-active' : ''}`}>
+                          <input
+                            type="radio"
+                            name="bottleSize"
+                            value={size}
+                            checked={form.bottleSize === size}
+                            onChange={(event) => updateField('bottleSize', event.target.value)}
+                            aria-invalid={Boolean(errors.bottleSize)}
+                            aria-describedby={describedBy('bottleSize')}
+                          />
+                          <span>{size}</span>
+                        </label>
+                      ))}
+                    </div>
+                    {errors.bottleSize && (
+                      <p className="field__error" id="contact-bottleSize-error">
+                        {errors.bottleSize}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset className="contact__group contact__group--project">
+                <legend className="contact__group-label">PROJECT DETAILS</legend>
+                <div className="field">
+                  <label htmlFor="contact-message">
+                    Project notes <span className="field__optional">(optional)</span>
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="3"
+                    placeholder="Tell us about the occasion, brand or quantity you have in mind."
+                    value={form.message}
+                    onChange={(event) => updateField('message', event.target.value)}
+                  />
+                </div>
+              </fieldset>
+
+              <div className="contact__actions">
+                <button className="button button--primary" type="submit">
+                  REQUEST A QUOTE
+                </button>
               </div>
-              {errors.bottleSize && (
-                <p className="field__error" id="contact-bottleSize-error">
-                  {errors.bottleSize}
-                </p>
-              )}
-            </fieldset>
 
-            <div className="field">
-              <label htmlFor="contact-message">
-                Project notes <span className="field__optional">(optional)</span>
-              </label>
-              <textarea
-                id="contact-message"
-                name="message"
-                rows="3"
-                placeholder="Tell us about the occasion, brand or quantity you have in mind."
-                value={form.message}
-                onChange={(event) => updateField('message', event.target.value)}
-              />
-            </div>
-
-            <div className="contact__actions">
-              <button className="button button--primary" type="submit">
-                REQUEST A QUOTE
-              </button>
-            </div>
-
-            <div className="inquiry-form__status" aria-live="polite" role="status">
-              {status}
-            </div>
-          </form>
-        </Reveal>
+              <div className="inquiry-form__status" aria-live="polite" role="status">
+                {status}
+              </div>
+            </form>
+          </Reveal>
+        </div>
       </div>
     </section>
   )
